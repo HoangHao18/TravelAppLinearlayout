@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SuaTour">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_container_add_tour"
+            android:layout_width="match_parent"
+            android:layout_height="781dp"
+            android:background="#FCFCFD"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_background02"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="#487993"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tittle"
+                android:layout_width="370dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="20dp"
+                android:background="#365D6C"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtSuaTour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#DAA7A7"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Chỉnh Sửa Thông Tin Tour"
+                    android:textColor="#E8E9EF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="match_parent"
+                android:layout_height="303dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtMaTour"
+                        android:layout_width="80dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Mã Tour:"
+                        android:textColor="#365D6C" />
+
+                    <EditText
+                        android:id="@+id/edtMaTour"
+                        android:layout_width="307dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:inputType="textPersonName"
+                        android:textColor="#365D6C"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtLoTrinh"
+                        android:layout_width="80dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Lộ trình:"
+                        android:textColor="#365D6C" />
+
+                    <Spinner
+                        android:id="@+id/spinnerFrom"
+                        android:layout_width="130dp"
+                        android:layout_height="31dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="20dp" />
+
+                    <TextView
+                        android:id="@+id/txtToi"
+                        android:layout_width="23dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Tới"
+                        android:textColor="#365D6C" />
+
+                    <Spinner
+                        android:id="@+id/spinnerTo"
+                        android:layout_width="130dp"
+                        android:layout_height="31dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="27dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtHanhTrinh"
+                        android:layout_width="80dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Hành Trình:"
+                        android:textColor="#365D6C" />
+
+                    <EditText
+                        android:id="@+id/edtDay"
+                        android:layout_width="52dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="#365D6C"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtNgay"
+                        android:layout_width="40dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Ngày"
+                        android:textColor="#365D6C" />
+
+                    <EditText
+                        android:id="@+id/edtNight"
+                        android:layout_width="52dp"
+                        android:layout_height="36dp"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="#365D6C"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtDem"
+                        android:layout_width="39dp"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="23dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Đêm"
+                        android:textColor="#365D6C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txtGiaTour"
+                        android:layout_width="80dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Giá Tour:"
+                        android:textColor="#365D6C" />
+
+                    <EditText
+                        android:id="@+id/edtPrice"
+                        android:layout_width="264dp"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="20dp"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:textColor="#365D6C"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtToi2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="VND"
+                        android:textColor="#365D6C" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnXoa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#83272A"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Xóa Tour"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        app:rippleColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btnLuu"
+                        android:layout_width="66dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#365D6C"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Lưu"
+                        android:textColor="#FFFFFF"
+                        android:textSize="10sp"
+                        app:rippleColor="#FFFFFF" />
+
+                    <Button
+                        android:id="@+id/btndatLai"
+                        android:layout_width="75dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#365D6C"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Đặt Lại"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/btnThoat"
+                        android:layout_width="76dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="#365D6C"
+                        android:fontFamily="@font/averia_sans_libre"
+                        android:text="Thoát"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_background03"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="#487993"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

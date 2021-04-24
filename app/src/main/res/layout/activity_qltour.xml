@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".qltour">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:id="@+id/ll_container_qltour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layoutDirection="inherit"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_background02_qltour"
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:background="#487993"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tittle_qltour"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginRight="20dp"
+                android:background="#365D6C"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtDSTour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="105dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#DAA7A7"
+                    android:fontFamily="@font/averia_sans_libre"
+                    android:text="Danh Sách Tour
+"
+                    android:textColor="#E8E9EF"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_table_container"
+                android:layout_width="match_parent"
+                android:layout_height="434dp"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_tool"
+                    android:layout_width="match_parent"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="180dp"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="5dp"
+                        android:autofillHints=""
+                        android:background="@drawable/my_border_search"
+                        android:ems="10"
+                        android:fontFamily="@font/averia_gruesa_libre"
+                        android:hint="Search..."
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15px"
+                        android:textColor="#365D6C"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/my_border_search"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnSearch"
+                            android:layout_width="34dp"
+                            android:layout_height="28dp"
+                            android:backgroundTint="#FEFEFF"
+                            android:backgroundTintMode="src_in"
+                            android:tint="#365D6C"
+                            app:layout_constraintVertical_bias="0.0"
+                            app:srcCompat="@android:drawable/ic_menu_search" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="31dp"
+                        android:layout_marginLeft="156dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/my_border_search"
+                        android:orientation="vertical">
+
+                        <ImageButton
+                            android:id="@+id/btnThemTour"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:backgroundTint="#FCFDFD"
+                            android:backgroundTintMode="src_in"
+                            android:tint="#365D6C"
+                            app:srcCompat="@android:drawable/ic_menu_add" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TableLayout
+                    android:id="@+id/tableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/my_border_row_even">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="110px">
+
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_tittle"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_tittle"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="STT"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_tittle"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Mã Tour"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="101dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_tittle"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Lộ Trình"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="85dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_tittle"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:text="Hành Trình"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                        <TextView
+                            android:layout_width="68dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_tittle"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="15px"
+                            android:paddingRight="0dp"
+                            android:text="Giá Tour"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#FFFFFF"
+                        android:minHeight="70px">
+
+
+                        <ImageButton
+                            android:id="@+id/btnThaoTac"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_odd"
+                            android:backgroundTint="#365D6C"
+                            android:backgroundTintMode="screen"
+                            android:foregroundTint="#FAF6F6"
+                            android:tint="#365D6C"
+                            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_odd"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="12px"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_odd"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="T01"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="111dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_odd"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="Hà Nội - Đà Lạt"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_odd"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="3 ngày 2 đêm"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_odd"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="6000000"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:backgroundTint="#FFFFFF"
+                        android:minHeight="70px">
+
+
+                        <ImageButton
+                            android:id="@+id/btnThaoTac2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_even"
+                            android:backgroundTintMode="screen"
+                            android:foregroundTint="#FFFFFF"
+                            android:tint="#365D6C"
+                            app:srcCompat="@android:drawable/ic_menu_edit" />
+
+                        <TextView
+                            android:layout_width="32dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_even"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingTop="12px"
+                            android:text="1"
+                            android:textAlignment="center"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="64dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_even"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="T01"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="118dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_even"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="Hà Nội - Đà Lạt"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="88dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_even"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="3 ngày 2 đêm"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/my_border_row_even"
+                            android:fontFamily="@font/averia_sans_libre"
+                            android:paddingLeft="10px"
+                            android:paddingTop="12px"
+                            android:text="6000000"
+                            android:textAlignment="inherit"
+                            android:textColor="#365D6C"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+
+                    <!--                    <TableRow-->
+                    <!--                        android:layout_width="match_parent"-->
+                    <!--                        android:minHeight="70px">-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="36dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="2"-->
+                    <!--                            android:textAlignment="center"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="64dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="T02"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="64dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="Đà Lạt - Vũng Tàu"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="64dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="2 ngày 1 đêm"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="77dp"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:background="#FFFFFF"-->
+                    <!--                            android:fontFamily="@font/averia_sans_libre"-->
+                    <!--                            android:paddingLeft="10px"-->
+                    <!--                            android:paddingTop="12px"-->
+                    <!--                            android:text="3000000"-->
+                    <!--                            android:textAlignment="inherit"-->
+                    <!--                            android:textColor="#060E15"-->
+                    <!--                            android:textSize="12sp" />-->
+
+
+                    <!--                    </TableRow>-->
+
+
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_background03_qltour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#487993"
+                android:orientation="vertical"></LinearLayout>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
